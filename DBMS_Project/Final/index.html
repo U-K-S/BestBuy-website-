@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Retail Store</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Include Slick slider library -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  
+  <!-- Include your custom JavaScript file -->
+  <script src="index.js"></script>
+  
+  <!-- Include your custom CSS file -->
+  <link rel="stylesheet" href="home.css">
+	
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<a href ="index.html">
+				<img src="assets/images__1_-removebg-preview.png" alt="My Retail Store Logo">
+				</a>
+			<p style="font-family:'Allura'; font-size: 45px; white-space:nowrap;">Best Buy</p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="login.html">Login</a></li>
+				<li><a href="cart.html">Cart</a></li>
+				<li><a href="profile.html">Profile</a></li>
+				<li><a href="aboutUs.html">About</a></li>
+				<li><a href="contactUs.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<div class="search-bar">
+			<form action="searchProduct.html" method="get">
+				<input type="text" placeholder="Search..." name="search" id="search">
+				<button type="submit">Go</button>
+			</form>
+			
+			<script src="search.js"></script>
+			  
+
+		</div>
+	</header>
+	<div class="heroine">
+		<h1>Welcome to Best Buy</h1>
+		<p>Here at our Retail Store, we offer a wide range of products including clothing, accessories, and home decor. We strive to provide our customers with high-quality products at affordable prices.</p>
+	</div>
+	<div class="featured-products">
+		<h2>Featured Products</h2>
+		<div class="slider">
+		  <div class="slide">
+			<a href="product.html?pid=1">
+				<img src="/assets/iphone2.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=2">
+				<img src="/assets/laptop.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=3">
+				<img src="/assets/tuxedo.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=4">
+				<img src="/assets/iron2.jpeg"></div>
+			</a>		  
+		</div>
+	</div>
+	<div class="on-sale-products">
+		<h2>On Sale Now!</h2>
+		<div class="slider">
+		  <div class="slide">
+			<a href="product.html?pid=5">
+				<img src="/assets/buds.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=6">
+				<img src="/assets/gta5.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=7">
+				<img src="/assets/tv.jpeg"></div>
+			</a>
+		  <div class="slide">
+			<a href="product.html?pid=8">
+				<img src="/assets/ps5.jpeg"></div>
+			</a>
+		</div>
+	</div>
+	
+	<footer>
+		<p>&copy; 2023 BestBuy. All rights reserved.</p>
+	</footer>
+</body>
+</html>

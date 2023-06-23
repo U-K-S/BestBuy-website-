@@ -1,0 +1,73 @@
+﻿TEN SQL Queries
+
+
+Query 1: Update clothing prices by 1000 whose quantity is less than equal to 5.
+
+
+SELECT * FROM best_buy.clothing;
+UPDATE best_buy.clothing
+SET price = price + 1000
+WHERE quantity<=5;
+
+
+Query 2: Delete footwears whose quantity is 0.
+
+
+SELECT * from best_buy.footwear;
+DELETE from best_buy.footwear where quantity = 0;
+
+
+Query 3: Sort clothing according to their prices in ascending order.
+
+
+SELECT pid, prodname, price, discount, size from best_buy.clothing
+ORDER BY price, prodname;
+
+
+Query 4: Find the average price of electrical appliances whose prices are greater than or equal to 1000.
+
+
+SELECT AVG(price)
+FROM best_buy.electrical_appliances
+WHERE price>1000;
+
+
+Query 5: Insert a new row in the grocery table.
+
+
+INSERT INTO best_buy.grocery (pid, price, quantity, expdate)
+VALUES (101, 111, 2, 08/03/2023);
+
+
+Query 6: Join the clothing table and footwear table wrt colors.
+
+
+SELECT best_buy.clothing.prodname AS Clothing_name, best_buy.clothing.price AS Clothing_price, best_buy.clothing.colour AS Matching_colour, best_buy.footwear.prodname AS Footwear_name, best_buy.footwear.price AS Footwear_price FROM best_buy.clothing INNER JOIN best_buy.footwear ON best_buy.clothing.colour=best_buy.footwear.colour;
+
+
+Query 7: Give details of the user whose address is closer to the delivery person’s address.
+
+
+SELECT best_buy.user.Name AS User_name, best_buy.user.Phone_number AS User_phone_number, best_buy.user.Address AS Matching_address, best_buy.delivery_person.Name AS Delivery_person_name, best_buy.delivery_person.phone_no AS Delivery_person_phone_number
+FROM best_buy.user INNER JOIN best_buy.delivery_person ON best_buy.user.Address=best_buy.delivery_person.Address;
+
+
+Query 8: Give order details whose delivery dates are greater than 2022-12-31.
+
+
+SELECT Oid, Order_delivery, Payment_details FROM best_buy.order
+WHERE Order_delivery>'2022-12-31';
+
+
+Query 9: List the number of clothes that have the same colour.
+
+
+SELECT COUNT(pid), colour
+FROM bestbuy.clothing
+GROUP BY colour
+
+
+Query10: Tell if there exist clothes with size XL.
+
+
+SELECT * FROM bestbuy.clothing WHERE size = 'XL' AND EXISTS (SELECT * FROM bestbuy.clothing WHERE size = 'XL');
